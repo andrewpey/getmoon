@@ -141,9 +141,9 @@ layout: null
                 {
                     timeAgo = (dateDiff / oneDay).toFixed(1) + " days ago";
                 }
-                var releaseInfo = "Updated " + timeAgo";
-                $("#download").click(() => location.href = asset.browser_download_url).fadeTo("slow", 1);
-                $("#meta").attr("title", "v " + release.name).text(releaseInfo).fadeTo("slow", 1);
+                var releaseInfo = "Updated " + timeAgo;
+                $("#download").click(() => location.href = asset.browser_download_url).fadeTo(400, 1);
+                $("#meta").attr("title", "v " + release.name).text(releaseInfo).fadeTo(400, 1);
             });
         }
     </script>
