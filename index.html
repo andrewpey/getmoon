@@ -147,8 +147,8 @@ layout: null
                     timeAgo = (dateDiff / oneDay).toFixed(1) + " days ago";
                 }
                 var releaseInfo = "Was updated " + timeAgo + " and downloaded " + downloadCount.toLocaleString() + " times.";
-                $("#download").click(() => location.href = asset.browser_download_url).fadeIn("slow");
-                $("#meta").attr("title", release.name).text(releaseInfo).fadeIn("slow");
+                $("#download").click(() => location.href = asset.browser_download_url).fadeTo("slow", 1);
+                $("#meta").attr("title", "v " + release.name).text(releaseInfo).fadeTo("slow", 1);
             });
         }
     </script>
