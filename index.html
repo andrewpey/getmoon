@@ -44,7 +44,7 @@ layout: null
 
 <div style="text-align:center; font-size: 24px; color: #808080">Screenshot tool you'll love... or not.</div>
 
-<div id="download" style="margin: 50px auto 10px auto; cursor: pointer; width: 250px; text-align: center; padding: 10px; font-size: 32px; background: #7E1770; color: white;" onclick="location.href = 'Ehhou.Moon.exe'">DOWNLOAD</div>
+<div id="download" style="margin: 50px auto 10px auto; cursor: pointer; width: 250px; text-align: center; padding: 10px; font-size: 32px; background: #7E1770; color: white; opacity: 0">DOWNLOAD</div>
 <div id="meta" style="text-align:center; font-size: 12px; color: #cccccc; opacity: 0">&nbsp;</div>
 
 <style>
@@ -147,7 +147,7 @@ layout: null
                     timeAgo = (dateDiff / oneDay).toFixed(1) + " days ago";
                 }
                 var releaseInfo = "Was updated " + timeAgo + " and downloaded " + downloadCount.toLocaleString() + " times.";
-                $("#download").attr("href", asset.browser_download_url);
+                $("#download").click(() => location.href = asset.browser_download_url).fadeIn("slow");
                 $("#meta").attr("title", release.name).text(releaseInfo).fadeIn("slow");
             });
         }
