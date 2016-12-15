@@ -134,12 +134,9 @@ layout: null
                 var oneDay = 24 * oneHour;
                 var dateDiff = new Date() - new Date(asset.updated_at);
                 var timeAgo;
-                if (dateDiff < oneDay)
-                {
+                if (dateDiff < oneDay) {
                     timeAgo = Mathf.floor(dateDiff / oneHour) + " hours ago";
-                }
-                else
-                {
+                } else {
                     timeAgo = Mathf.floor(dateDiff / oneDay) + " days ago";
                 }
                 var releaseInfo = "Updated " + timeAgo;
