@@ -135,9 +135,9 @@ layout: null
                 var dateDiff = new Date() - new Date(asset.updated_at);
                 var timeAgo;
                 if (dateDiff < oneDay) {
-                    timeAgo = Mathf.floor(dateDiff / oneHour) + " hours ago";
+                    timeAgo = Math.floor(dateDiff / oneHour) + " hours ago";
                 } else {
-                    timeAgo = Mathf.floor(dateDiff / oneDay) + " days ago";
+                    timeAgo = Math.floor(dateDiff / oneDay) + " days ago";
                 }
                 var releaseInfo = "Updated " + timeAgo;
                 $("#download").click(() => location.href = asset.browser_download_url).fadeTo(400, 1);
